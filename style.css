@@ -1,0 +1,366 @@
+
+/* GENERAL */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Removes default margin and padding */
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+body {
+    font-family: "Playfair Display", serif;
+}
+
+
+html {
+   scroll-behavior: smooth;
+}
+
+
+p {
+   color:rgb(85,85,85);
+}
+
+
+/* TRANSITIONS */
+
+
+a,
+.btn {
+   transition: all 300ms ease;
+}
+
+
+/* DESKTOP NAV */
+
+
+nav,
+.nav-links {
+   display: flex;
+}
+
+
+nav {
+   justify-content: space-around;
+   align-items: center;
+   height: 17vh;
+}
+
+
+/* Used to make gap between words/ pages */
+.nav-links {
+   gap: 2rem;
+   list-style: none;
+   font-size: 1.3rem;
+   display: flex;
+   margin: 0;
+   padding: 0;
+}
+
+
+.nav-links li {
+   position: relative; /* Required for dropdown positioning */
+}
+
+
+/* Removes underline and color of the words*/
+
+
+a {
+   color: black;
+   text-decoration: none;
+   text-decoration: white;
+}
+
+
+/* Used for when you click on the words
+Links are styled to be clean (no underline)
+with hover effects adding an underline with a custom color */
+
+
+a:hover {
+   color: grey;
+   text-decoration: underline;
+   text-underline-offset: 1rem;
+   text-decoration-color: rgb(181,181,181);
+}
+
+
+.nav-links a:hover {
+   color: black;
+}
+
+/* SECTIONS */
+
+
+section {
+    padding-top: 4wh;
+    height: 96wh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+ 
+ 
+.section-container {
+    display: flex;
+}
+ 
+ 
+ /* HOME SECTION */
+ 
+ 
+#home {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+ 
+.section_text {
+    align-self: center;
+    flex-direction: column; /* Ensures content stacks vertically */
+    align-items: center;    /* Centers content horizontally */
+    text-align: center;
+}
+ 
+ 
+.section_text p {
+    font-weight: 600;
+}
+ 
+ 
+.section_text_p1 {
+    text-align: center;
+    font-size: 1.20rem;
+}
+
+.section_text_p2 {
+    font-size: 1.30rem;
+    margin-bottom: 1rem;
+} 
+ 
+ 
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.logo {
+    margin-top: 1rem; /* Adds space between text and logo */
+    align-self: center;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+ 
+ 
+.logo-hover {
+    cursor: default;
+}
+
+/* Headings */
+h1 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #0056b3;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Map Styling */
+#map {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #0077ff;
+}
+
+/* Section Styles */
+.ea_intro {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.scholarship-type {
+    margin-bottom: 20px;
+}
+
+.scholarship-type h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer {
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+header {
+    text-align: center;  /* Centers the text */
+    display: flex;  /* Enables flexbox */
+    flex-direction: column;  /* Aligns items vertically */
+    justify-content: center;  /* Centers items vertically */
+    align-items: center;  /* Centers items horizontally */
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.platforms-section {
+    margin-bottom: 30px;
+}
+
+.platform {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.platform h3 {
+    color: #2980b9;
+    font-size: 1.2em;
+}
+
+.platform p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.platform a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.platform a:hover {
+    text-decoration: underline;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #3498db;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.show {
+    max-height: 200px;
+    display: block;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+section p.success {
+    font-style: italic;
+    color: #0077cc;
+}
+
+/* FAQ Section */
+section ul.faq {
+    padding-left: 20px;
+}
+
+section ul.faq li {
+    margin-bottom: 10px;
+}
+
+section ul.faq li strong {
+    font-weight: bold;
+}
+
+/* General Button Styling */
+button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0033aa;
+}
+
+

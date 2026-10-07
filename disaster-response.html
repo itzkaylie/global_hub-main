@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Knowledge and Assistance Hub</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="mediaqueries.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="disaster-response.html">Disaster Response</a></li>
+                <li><a href="education-access.html">Education Access</a></li>
+                <li><a href="job-training.html">Job Training</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="disaster-response">
+        <div class="dr_intro">
+            <h1>The Importance of Disaster Response</h1>
+            <p>Disasters can strike at any moment, leaving communities vulnerable and in need. Effective disaster response minimizes impacts and ensures recovery.</p>
+            <h1>Welcome to the Disaster Response Hub</h1>
+            <p>We provide reliable resources, tools, and information for navigating emergencies effectively. Stay informed, prepared, and resilient with our support.</p>
+        </div>
+        <div class="dr_resources">
+            <h2>Key Resources</h2>
+            <ul>
+                <li><strong>Emergency Contacts:</strong> Find local and global emergency hotline numbers.</li>
+                <li><strong>Preparedness Guides:</strong> Learn how to prepare for natural and man-made disasters.</li>
+                <li><strong>Evacuation Plans:</strong> Locate safe evacuation routes and shelters in your area.</li>
+                <li><strong>First Aid Tips:</strong> Access life-saving first aid procedures.</li>
+            </ul>
+        </div>
+    </section>
+
+    <h1>Earthquake Incidence Map</h1>
+    <div id="map"></div>
+    <script>
+        // Initialize Leaflet map
+        const map = L.map('map').setView([20, 0], 2); // World view
+    
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+    
+        // Fetch earthquake data from USGS
+        const earthquakeURL = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-12-31&minmagnitude=5';
+    
+        fetch(earthquakeURL)
+            .then(response => response.json())
+            .then(data => {
+                data.features.forEach(earthquake => {
+                    const coords = earthquake.geometry.coordinates;
+                    const magnitude = earthquake.properties.mag;
+                    const place = earthquake.properties.place;
+    
+                    // Add a marker for each earthquake
+                    L.circleMarker([coords[1], coords[0]], {
+                        radius: magnitude * 2,
+                        color: 'red',
+                        fillOpacity: 0.7,
+                    })
+                    .bindPopup(`<b>Location:</b> ${place}<br><b>Magnitude:</b> ${magnitude}`)
+                    .addTo(map);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching earthquake data:', error);
+            });
+    </script>    
+<footer>
+    <p>&copy; 2024 Global Hub & Assistance. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
