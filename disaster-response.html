@@ -1,89 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Knowledge and Assistance Hub</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="mediaqueries.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-        #map {
-            height: 600px;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Emergency preparedness resources and a live map of recent significant earthquakes.">
+    <title>Disaster Response | Global Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer
+  ></script>
+
+  <script src="disaster-response.js" defer></script>
 </head>
 
-<body>
-    <nav id="desktop-nav">
+<body class="disaster-page">
+  <nav id="desktop-nav">
+    <div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a
+            href="disaster-response.html"
+            class="active-page"
+          >
+            Disaster Response
+          </a>
+        </li>
+
+        <li>
+          <a href="education-access.html">
+            Education Access
+          </a>
+        </li>
+
+        <li>
+          <a href="job-training.html">
+            Job Training
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page introduction -->
+    <section class="disaster-hero">
+      <div class="disaster-container disaster-hero-layout">
         <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="disaster-response.html">Disaster Response</a></li>
-                <li><a href="education-access.html">Education Access</a></li>
-                <li><a href="job-training.html">Job Training</a></li>
-            </ul>
+          <p class="disaster-eyebrow">
+            Prepare • Respond • Recover
+          </p>
+
+          <h1>
+            Reliable resources for
+            <span>urgent situations.</span>
+          </h1>
+
+          <p class="disaster-description">
+            Learn how to prepare for emergencies, protect the
+            people around you, and explore recent significant
+            earthquakes using live data.
+          </p>
+
+          <a class="disaster-button" href="#earthquake-map">
+            View Live Earthquake Map
+          </a>
         </div>
-    </nav>
-    <section id="disaster-response">
-        <div class="dr_intro">
-            <h1>The Importance of Disaster Response</h1>
-            <p>Disasters can strike at any moment, leaving communities vulnerable and in need. Effective disaster response minimizes impacts and ensures recovery.</p>
-            <h1>Welcome to the Disaster Response Hub</h1>
-            <p>We provide reliable resources, tools, and information for navigating emergencies effectively. Stay informed, prepared, and resilient with our support.</p>
+
+        <div class="emergency-panel">
+          <span class="emergency-icon" aria-hidden="true">!</span>
+
+          <h2>Immediate emergency?</h2>
+
+          <p>
+            Contact the emergency services for your location
+            and follow instructions from local authorities.
+          </p>
+
+          <p class="emergency-note">
+            Global Hub provides general information and does
+            not replace official emergency guidance.
+          </p>
         </div>
-        <div class="dr_resources">
-            <h2>Key Resources</h2>
-            <ul>
-                <li><strong>Emergency Contacts:</strong> Find local and global emergency hotline numbers.</li>
-                <li><strong>Preparedness Guides:</strong> Learn how to prepare for natural and man-made disasters.</li>
-                <li><strong>Evacuation Plans:</strong> Locate safe evacuation routes and shelters in your area.</li>
-                <li><strong>First Aid Tips:</strong> Access life-saving first aid procedures.</li>
-            </ul>
-        </div>
+      </div>
     </section>
 
-    <h1>Earthquake Incidence Map</h1>
-    <div id="map"></div>
-    <script>
-        // Initialize Leaflet map
-        const map = L.map('map').setView([20, 0], 2); // World view
-    
-        // Add OpenStreetMap tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-        }).addTo(map);
-    
-        // Fetch earthquake data from USGS
-        const earthquakeURL = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01&endtime=2024-12-31&minmagnitude=5';
-    
-        fetch(earthquakeURL)
-            .then(response => response.json())
-            .then(data => {
-                data.features.forEach(earthquake => {
-                    const coords = earthquake.geometry.coordinates;
-                    const magnitude = earthquake.properties.mag;
-                    const place = earthquake.properties.place;
-    
-                    // Add a marker for each earthquake
-                    L.circleMarker([coords[1], coords[0]], {
-                        radius: magnitude * 2,
-                        color: 'red',
-                        fillOpacity: 0.7,
-                    })
-                    .bindPopup(`<b>Location:</b> ${place}<br><b>Magnitude:</b> ${magnitude}`)
-                    .addTo(map);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching earthquake data:', error);
-            });
-    </script>    
-<footer>
-    <p>&copy; 2024 Global Hub & Assistance. All rights reserved.</p>
-</footer>
+    <!-- Preparedness resources -->
+    <section class="preparedness-section">
+      <div class="disaster-container">
+        <div class="disaster-section-heading">
+          <p class="disaster-eyebrow">Be prepared</p>
+
+          <h2>Essential emergency steps</h2>
+
+          <p>
+            Small preparations can make it easier to respond
+            quickly when conditions change.
+          </p>
+        </div>
+
+        <div class="preparedness-grid">
+          <article class="preparedness-card">
+            <span class="preparedness-number">01</span>
+
+            <h3>Create a contact plan</h3>
+
+            <p>
+              Choose an out-of-area contact and make sure
+              everyone in your household knows how to reach
+              them.
+            </p>
+          </article>
+
+          <article class="preparedness-card">
+            <span class="preparedness-number">02</span>
+
+            <h3>Build an emergency kit</h3>
+
+            <p>
+              Include water, nonperishable food, medication,
+              flashlights, chargers, and important documents.
+            </p>
+          </article>
+
+          <article class="preparedness-card">
+            <span class="preparedness-number">03</span>
+
+            <h3>Know your exit routes</h3>
+
+            <p>
+              Identify multiple evacuation routes and choose
+              a safe meeting location ahead of time.
+            </p>
+          </article>
+
+          <article class="preparedness-card">
+            <span class="preparedness-number">04</span>
+
+            <h3>Follow verified alerts</h3>
+
+            <p>
+              Use information from emergency services, local
+              government agencies, and trusted weather
+              organizations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency guidance -->
+    <section class="response-section">
+      <div class="disaster-container response-layout">
+        <div>
+          <p class="disaster-eyebrow">During an emergency</p>
+
+          <h2>Respond carefully and stay informed</h2>
+        </div>
+
+        <div class="response-list">
+          <div class="response-item">
+            <span>✓</span>
+
+            <p>
+              Follow evacuation or shelter instructions from
+              local authorities.
+            </p>
+          </div>
+
+          <div class="response-item">
+            <span>✓</span>
+
+            <p>
+              Use text messages when phone networks are
+              congested.
+            </p>
+          </div>
+
+          <div class="response-item">
+            <span>✓</span>
+
+            <p>
+              Never enter damaged buildings or drive through
+              flooded roads.
+            </p>
+          </div>
+
+          <div class="response-item">
+            <span>✓</span>
+
+            <p>
+              Check on neighbors only when conditions are safe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live earthquake map -->
+    <section class="earthquake-section" id="earthquake-map">
+      <div class="disaster-container">
+        <div class="disaster-section-heading">
+          <p class="disaster-eyebrow">Live global data</p>
+
+          <h2>Recent significant earthquakes</h2>
+
+          <p>
+            This map displays earthquakes with a magnitude of
+            4.5 or greater reported by the U.S. Geological
+            Survey during the past 30 days.
+          </p>
+        </div>
+
+        <div class="map-container">
+          <div class="map-header">
+            <div>
+              <h3>Global Earthquake Activity</h3>
+
+              <p id="map-status" aria-live="polite">
+                Loading live earthquake data...
+              </p>
+            </div>
+
+            <div class="map-legend">
+              <span></span>
+              Earthquake location
+            </div>
+          </div>
+
+          <div
+            id="map"
+            aria-label="Map displaying recent earthquakes"
+          ></div>
+        </div>
+
+        <p class="data-credit">
+          Earthquake information is provided by the
+          U.S. Geological Survey.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="current-year">2026</span>
+      Global Hub & Assistance. All rights reserved.
+    </p>
+  </footer>
 </body>
 </html>
-

@@ -363,4 +363,402 @@ button:hover {
     background-color: #0033aa;
 }
 
+/* ========================================
+   DISASTER RESPONSE PAGE
+   ======================================== */
+
+.disaster-page {
+  color: #10233e;
+  background: #f5faff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.disaster-page .active-page {
+  color: #1473e6;
+  font-weight: 700;
+}
+
+.disaster-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Hero */
+
+.disaster-hero {
+  padding: 85px 0;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(56, 169, 255, 0.24),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fcff,
+      #e6f3ff
+    );
+}
+
+.disaster-hero-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.disaster-eyebrow {
+  margin-bottom: 15px;
+
+  color: #1473e6;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.disaster-hero h1 {
+  max-width: 720px;
+  margin: 0 0 22px;
+
+  color: #071a33;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+}
+
+.disaster-hero h1 span {
+  color: #1473e6;
+}
+
+.disaster-description {
+  max-width: 680px;
+  margin-bottom: 28px;
+
+  color: #5c6f87;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.disaster-button {
+  display: inline-flex;
+  min-height: 50px;
+  padding: 0 21px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #1473e6,
+    #0759bd
+  );
+
+  box-shadow: 0 12px 25px rgba(20, 115, 230, 0.25);
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.disaster-button:hover {
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Emergency panel */
+
+.emergency-panel {
+  padding: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+
+  color: white;
+  background: linear-gradient(
+    145deg,
+    #0b3b75,
+    #071a33
+  );
+
+  box-shadow: 0 28px 60px rgba(7, 26, 51, 0.2);
+}
+
+.emergency-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 15px;
+
+  color: #071a33;
+  background: #ffcf5c;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.emergency-panel h2 {
+  margin-bottom: 12px;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.emergency-panel p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.emergency-note {
+  margin-top: 20px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 0.88rem;
+}
+
+/* Preparedness */
+
+.preparedness-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.disaster-section-heading {
+  max-width: 720px;
+  margin-bottom: 34px;
+}
+
+.disaster-section-heading h2,
+.response-section h2 {
+  margin: 0 0 12px;
+
+  color: #071a33;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.disaster-section-heading > p:last-child {
+  color: #5c6f87;
+  font-size: 1.05rem;
+}
+
+.preparedness-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.preparedness-card {
+  padding: 25px;
+
+  border: 1px solid #d8e9f8;
+  border-radius: 20px;
+
+  background: white;
+  box-shadow: 0 10px 30px rgba(13, 70, 130, 0.07);
+
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease;
+}
+
+.preparedness-card:hover {
+  transform: translateY(-5px);
+  border-color: #86c8ff;
+}
+
+.preparedness-number {
+  color: #1473e6;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.preparedness-card h3 {
+  margin: 13px 0 10px;
+  color: #10233e;
+  font-size: 1.1rem;
+}
+
+.preparedness-card p {
+  margin: 0;
+  color: #5c6f87;
+  font-size: 0.94rem;
+}
+
+/* Response section */
+
+.response-section {
+  padding: 80px 0;
+
+  background: linear-gradient(
+    135deg,
+    #e9f5ff,
+    #f8fcff
+  );
+}
+
+.response-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.response-list {
+  display: grid;
+  gap: 12px;
+}
+
+.response-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 17px;
+
+  border: 1px solid #d8e9f8;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.response-item span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: white;
+  background: #1473e6;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.response-item p {
+  margin: 0;
+  color: #435a73;
+}
+
+/* Earthquake map */
+
+.earthquake-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.map-container {
+  overflow: hidden;
+
+  border: 1px solid #d8e9f8;
+  border-radius: 24px;
+
+  background: white;
+  box-shadow: 0 20px 45px rgba(13, 70, 130, 0.13);
+}
+
+.map-header {
+  padding: 18px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-bottom: 1px solid #d8e9f8;
+}
+
+.map-header h3 {
+  margin: 0 0 4px;
+  color: #10233e;
+}
+
+.map-header p {
+  margin: 0;
+  color: #5c6f87;
+  font-size: 0.9rem;
+}
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #5c6f87;
+  font-size: 0.85rem;
+}
+
+.map-legend span {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+#map {
+  width: 100%;
+  height: 540px;
+}
+
+.data-credit {
+  margin-top: 14px;
+
+  color: #6e8298;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+  .disaster-hero-layout,
+  .response-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preparedness-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .disaster-container {
+    width: calc(100% - 26px);
+  }
+
+  .disaster-hero {
+    padding: 55px 0;
+  }
+
+  .disaster-hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .preparedness-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #map {
+    height: 420px;
+  }
+}
+
 

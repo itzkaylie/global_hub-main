@@ -1,5 +1,3 @@
-map.locate({ setView: true, maxZoom: 10 });
-
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
     // Example of adding interactivity (such as showing/hiding scholarship details)
