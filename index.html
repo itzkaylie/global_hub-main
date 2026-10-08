@@ -1,43 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Knowledge and Assistance Hub</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="mediaqueries.css"/>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Clear, multilingual digital guidance and resources for immigrant and low-income families."
+  >
+
+  <title>Global Hub | Clear Digital Guidance</title>
+
+  <link rel="stylesheet" href="./home.css">
 </head>
 
-<body>
-   <nav id="desktop-nav">
-       <!-- List of my pages that are gonna get linked -->
-       <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="disaster-response.html">Disaster Response</a></li>
-                <li><a href="education-access.html">Education Access</a></li>
-                <li><a href="job-training.html">Job Training</a></li>
-            </ul>
-       </div>
-   </nav>
+<body class="manual-home">
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="manual-nav" aria-label="Main navigation">
+      <a
+        class="logo-link"
+        href="index.html"
+        aria-label="Global Hub home"
+      >
+        <img
+          src="./assets/Global_Hub_Logo.png"
+          alt="Global Hub"
+          class="nav-logo"
+        >
+      </a>
 
-   <section id="home">
-        <div class="section_text">
-            <p class="section_text_p1"> This is the </p>
-            <h1 class="title"> Global Hub Assistance </h1>
-            <p class="section_text_p2"> A platform that connects people worldwide with resources and information on crucial global topics </p>
-            <div class="logo">
-            <img
-                src="./assets/Global_Hub_Logo.png"
-                alt="Logo of Global Hub"
-            /> 
-            </div>
+      <ul class="nav-links">
+        <li>
+          <a
+            class="active-page"
+            aria-current="page"
+            href="index.html"
+          >
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="disaster-response.html">
+            Emergency Help
+          </a>
+        </li>
+
+        <li>
+          <a href="education-access.html">
+            Education
+          </a>
+        </li>
+
+        <li>
+          <a href="#mission">
+            About
+          </a>
+        </li>
+      </ul>
+
+      <span class="language-note">
+        English · More languages planned
+      </span>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="manual-hero">
+      <div class="hero-content">
+        <p class="chapter-label">
+          START HERE · GUIDE 00
+        </p>
+
+        <h1>
+          Digital tasks,
+          <span>explained step by step.</span>
+        </h1>
+
+        <p class="hero-description">
+          Clear resources and beginner-friendly guides for
+          immigrant families navigating education, employment,
+          emergencies, and everyday online services.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#choose-help">
+            Find a guide
+          </a>
+
+          <a class="secondary-button" href="#mission">
+            Why I’m building this
+          </a>
         </div>
+
+        <div class="availability-note">
+          <span aria-hidden="true">●</span>
+
+          <p>
+            Currently available in English. Translations,
+            narrated guides, and videos are planned.
+          </p>
+        </div>
+      </div>
+
+    <!-- Main choices -->
+    <section class="help-section" id="choose-help">
+      <header class="section-heading">
+        <p class="chapter-label">CHOOSE A CHAPTER</p>
+        <h2>What would you like help with?</h2>
+
+        <p>
+          Select a topic to find instructions, trustworthy
+          resources, and useful starting points.
+        </p>
+      </header>
+
+      <div class="chapter-grid">
+        <a
+          class="chapter-card emergency-chapter"
+          href="disaster-response.html"
+        >
+          <span class="chapter-number">01</span>
+
+          <span class="chapter-icon" aria-hidden="true">!</span>
+
+          <div>
+            <h3>Emergency Help</h3>
+
+            <p>
+              Prepare for emergencies and find current information
+              from trusted sources.
+            </p>
+
+            <ul>
+              <li>Preparation checklists</li>
+              <li>Family emergency plans</li>
+              <li>Live hazard information</li>
+            </ul>
+          </div>
+
+          <span class="chapter-link">
+            Open chapter →
+          </span>
+        </a>
+
+        <a
+          class="chapter-card education-chapter"
+          href="education-access.html"
+        >
+          <span class="chapter-number">02</span>
+
+          <span class="chapter-icon" aria-hidden="true">A+</span>
+
+          <div>
+            <h3>Education Access</h3>
+
+            <p>
+              Find free learning opportunities and financial
+              support for students.
+            </p>
+
+            <ul>
+              <li>Scholarships</li>
+              <li>Free courses</li>
+              <li>Student competitions</li>
+            </ul>
+          </div>
+
+          <span class="chapter-link">
+            Open chapter →
+          </span>
+        </a>
+
+        <a
+          class="chapter-card jobs-chapter"
+          href="job-training.html"
+        >
+          <span class="chapter-number">03</span>
+
+          <span class="chapter-icon" aria-hidden="true">↗</span>
+
+          <div>
+            <h3>Jobs & Training</h3>
+
+            <p>
+              Explore free training, certifications, and pathways
+              toward new careers.
+            </p>
+
+            <ul>
+              <li>Free training programs</li>
+              <li>Certifications</li>
+              <li>Career preparation</li>
+            </ul>
+          </div>
+
+          <span class="chapter-link">
+            Open chapter →
+          </span>
+        </a>
+
+        <a
+          class="chapter-card lessons-chapter"
+          href="#future-lessons"
+        >
+          <span class="chapter-number">04</span>
+
+          <span class="chapter-icon" aria-hidden="true">▶</span>
+
+          <div>
+            <h3>Digital Lessons</h3>
+
+            <p>
+              Learn how to complete everyday online tasks safely
+              and independently.
+            </p>
+
+            <ul>
+              <li>Email and passwords</li>
+              <li>Online forms</li>
+              <li>Scam awareness</li>
+            </ul>
+          </div>
+
+          <span class="chapter-link">
+            Preview lessons →
+          </span>
+        </a>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Global Hub & Assistance. All rights reserved.</p>
-    </footer>
+    <!-- How it works -->
+    <section class="process-section">
+      <header class="section-heading">
+        <p class="chapter-label">HOW THE GUIDES WORK</p>
+        <h2>One task. One step at a time.</h2>
 
+        <p>
+          Every future guide will use the same predictable
+          structure, so visitors always know what to do next.
+        </p>
+      </header>
+
+      <ol class="process-list">
+        <li>
+          <span class="process-number">1</span>
+
+          <div class="process-illustration" aria-hidden="true">
+            <div class="simple-document">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <h3>Prepare</h3>
+
+          <p>
+            See what information or documents you need before
+            starting.
+          </p>
+        </li>
+
+        <li>
+          <span class="process-number">2</span>
+
+          <div class="process-illustration" aria-hidden="true">
+            <div class="simple-screen">
+              <span class="screen-button"></span>
+            </div>
+          </div>
+
+          <h3>Follow</h3>
+
+          <p>
+            Complete each action using clear screenshots,
+            translations, and examples.
+          </p>
+        </li>
+
+        <li>
+          <span class="process-number">3</span>
+
+          <div class="process-illustration" aria-hidden="true">
+            <div class="simple-check">✓</div>
+          </div>
+
+          <h3>Review</h3>
+
+          <p>
+            Check your work and learn what should happen after
+            completing the task.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission-section" id="mission">
+      <div class="mission-marker" aria-hidden="true">
+        ABOUT THIS PROJECT
+      </div>
+
+      <div class="mission-heading">
+        <p class="chapter-label">A NOTE FROM YUXIN</p>
+
+        <h2>
+          Helping families feel more independent online.
+        </h2>
+      </div>
+
+      <div class="mission-copy">
+        <p>
+          Growing up, I often helped my parents navigate websites,
+          online forms, accounts, and other digital tasks. Many
+          immigrant families have similar experiences: important
+          systems may be unfamiliar, unavailable in their preferred
+          language, or unnecessarily difficult to understand.
+        </p>
+
+        <p>
+          I’m building Global Hub to make that process less
+          confusing. My goal is to create multilingual, accessible
+          guidance for people learning independently and for family
+          members helping someone else.
+        </p>
+
+        <p>
+          This project is still growing. I plan to add translations,
+          narrated instructions, printable guides, and video
+          tutorials demonstrating the digital tasks I helped my own
+          parents complete.
+        </p>
+      </div>
+
+      <div class="mission-values">
+        <article>
+          <span>01</span>
+          <h3>Plain language</h3>
+          <p>
+            Instructions should be understandable without technical
+            knowledge.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Multiple languages</h3>
+          <p>
+            Language should not prevent someone from finding useful
+            information.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Greater independence</h3>
+          <p>
+            The goal is to help people confidently complete tasks
+            themselves.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Future digital lessons -->
+    <section class="lessons-section" id="future-lessons">
+      <header class="section-heading">
+        <p class="chapter-label">COMING LATER</p>
+        <h2>Everyday digital lessons</h2>
+
+        <p>
+          These tutorials will combine written instructions,
+          screenshots, translations, and short videos.
+        </p>
+      </header>
+
+      <div class="lesson-list">
+        <article class="lesson-row">
+          <span class="lesson-number">01</span>
+
+          <div>
+            <p class="lesson-category">INTERNET BASICS</p>
+            <h3>How to create and use an email account</h3>
+          </div>
+
+          <span class="lesson-level">Beginner</span>
+          <span class="coming-soon">Planned</span>
+        </article>
+
+        <article class="lesson-row">
+          <span class="lesson-number">02</span>
+
+          <div>
+            <p class="lesson-category">ONLINE SAFETY</p>
+            <h3>How to recognize suspicious messages and scams</h3>
+          </div>
+
+          <span class="lesson-level">Beginner</span>
+          <span class="coming-soon">Planned</span>
+        </article>
+
+        <article class="lesson-row">
+          <span class="lesson-number">03</span>
+
+          <div>
+            <p class="lesson-category">ONLINE FORMS</p>
+            <h3>How to upload a document to a website</h3>
+          </div>
+
+          <span class="lesson-level">Beginner</span>
+          <span class="coming-soon">Planned</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Transparency -->
+    <aside class="project-notice">
+      <span class="notice-icon" aria-hidden="true">i</span>
+
+      <div>
+        <h2>This project is still developing.</h2>
+
+        <p>
+          Global Hub is an independent educational project. It does
+          not replace official emergency, legal, medical,
+          educational, or government guidance. Resources will
+          continue to be reviewed and expanded.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <a
+      class="footer-logo"
+      href="index.html"
+      aria-label="Return to Global Hub home"
+    >
+      <img
+        src="./assets/Global_Hub_Logo.png"
+        alt="Global Hub"
+      >
+    </a>
+
+    <div class="footer-message">
+      <strong>Clear guidance for every generation.</strong>
+
+      <p>
+        Built by Yuxin to make digital information easier to
+        understand and navigate.
+      </p>
+    </div>
+
+    <div class="footer-details">
+      <p>Currently available in English.</p>
+      <p>&copy; 2026 Global Hub</p>
+    </div>
+  </footer>
 </body>
 </html>

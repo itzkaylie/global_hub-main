@@ -1,0 +1,1039 @@
+/* =========================================
+   EMERGENCY HELP — INSTRUCTION MANUAL THEME
+   ========================================= */
+
+/* ---------- Page setup ---------- */
+
+.emergency-page {
+  --navy: #17324d;
+  --blue: #3679bd;
+  --blue-light: #e6f1fa;
+  --paper: #fffef9;
+  --background: #f4f2eb;
+  --ink: #1f2933;
+  --muted: #59636e;
+  --yellow: #f3c95c;
+  --yellow-light: #fff1b8;
+  --orange: #df7655;
+  --green: #579169;
+  --line: #17324d;
+
+  margin: 0;
+
+  color: var(--ink);
+  background: var(--background);
+
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.emergency-page *,
+.emergency-page *::before,
+.emergency-page *::after {
+  box-sizing: border-box;
+}
+
+.emergency-page h1,
+.emergency-page h2,
+.emergency-page h3,
+.emergency-page p {
+  color: inherit;
+}
+
+.emergency-page ul,
+.emergency-page ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.emergency-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.emergency-page button {
+  font: inherit;
+}
+
+.section-container {
+  width: min(1100px, calc(100% - 3rem)) !important;
+  margin-inline: auto !important;
+}
+
+.guide-label,
+.section-label,
+.map-small-label {
+  margin: 0 0 1rem;
+
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- Navigation ---------- */
+
+.emergency-page .site-header {
+  position: relative;
+  z-index: 100;
+
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+
+  background: var(--paper);
+  border: 0;
+  border-bottom: 2px solid var(--navy);
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.emergency-page .site-header::before,
+.emergency-page .site-header::after {
+  display: none;
+}
+
+.manual-nav {
+  width: min(1240px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0.9rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-logo {
+  width: 68px;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+}
+
+.emergency-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.emergency-page .nav-links a {
+  position: relative;
+  padding: 0.5rem 0;
+
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.emergency-page .nav-links a::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 3px;
+
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+}
+
+.emergency-page .nav-links a:hover::after,
+.emergency-page .nav-links a:focus-visible::after,
+.emergency-page .nav-links .active-page::after {
+  transform: scaleX(1);
+}
+
+.language-note {
+  flex-shrink: 0;
+  padding: 0.5rem 0.75rem;
+
+  color: var(--navy);
+  background: var(--blue-light);
+  border: 1px solid var(--navy);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+/* ---------- Hero ---------- */
+
+.emergency-page .emergency-hero {
+  width: min(1100px, calc(100% - 3rem)) !important;
+  margin: 0 auto !important;
+  padding: 6rem 0 !important;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  align-items: start;
+  gap: 5rem;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-copy h1 {
+  max-width: 760px;
+  margin: 0;
+
+  color: var(--navy);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+
+.hero-copy h1 span {
+  display: block;
+  color: var(--orange);
+}
+
+.hero-description {
+  max-width: 690px;
+  margin: 1.75rem 0 0;
+
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.emergency-page .primary-button,
+.emergency-page .secondary-button {
+  padding: 0.9rem 1.25rem;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--navy);
+
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.emergency-page .primary-button {
+  color: white !important;
+  background: var(--navy);
+}
+
+.emergency-page .secondary-button {
+  color: var(--navy) !important;
+  background: transparent;
+}
+
+.emergency-page .primary-button:hover,
+.emergency-page .primary-button:focus-visible {
+  color: var(--navy) !important;
+  background: var(--yellow);
+}
+
+.emergency-page .secondary-button:hover,
+.emergency-page .secondary-button:focus-visible {
+  background: var(--blue-light);
+}
+
+.page-summary {
+  padding: 1.6rem;
+
+  background: var(--paper);
+  border: 2px solid var(--navy);
+  box-shadow: 7px 7px 0 var(--navy);
+}
+
+.summary-label {
+  margin: 0;
+  padding-bottom: 0.8rem;
+
+  color: var(--orange);
+  border-bottom: 2px solid var(--navy);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-summary ol {
+  margin-top: 0.5rem;
+}
+
+.page-summary li {
+  padding: 0.95rem 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--navy);
+  border-bottom: 1px solid #cad1d7;
+
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.page-summary li:last-child {
+  border-bottom: 0;
+}
+
+.page-summary li span {
+  color: var(--orange);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+/* ---------- Urgent notice ---------- */
+
+.emergency-page .urgent-notice {
+  width: 100%;
+  margin: 0;
+  padding: 1.8rem max(1.5rem, calc((100% - 1100px) / 2)) !important;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+
+  color: var(--navy);
+  background: var(--yellow);
+  border-block: 2px solid var(--navy);
+}
+
+.warning-symbol {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: white;
+  background: var(--orange);
+  border: 2px solid var(--navy);
+
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.notice-label {
+  margin: 0 0 0.4rem;
+
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.urgent-notice h2 {
+  margin: 0 0 0.5rem;
+
+  color: var(--navy);
+  font-size: 1.4rem;
+}
+
+.urgent-notice p:last-child {
+  max-width: 850px;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ---------- Section 01: First steps ---------- */
+
+.emergency-page .first-steps {
+  width: 100%;
+  margin: 0;
+  padding: 6rem 0 !important;
+}
+
+.emergency-page .first-steps .section-container {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.85fr) minmax(500px, 1.15fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.emergency-page .first-steps .section-heading {
+  max-width: none;
+  margin: 0;
+  padding: 2.5rem;
+
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--navy);
+  box-shadow: 8px 8px 0 var(--navy);
+
+  text-align: left;
+}
+
+.emergency-page .first-steps .section-heading h2 {
+  margin: 0 0 1.25rem;
+
+  color: var(--navy);
+  font-size: clamp(2.7rem, 4.5vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.emergency-page .first-steps .section-heading > p:last-child {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.instruction-list {
+  width: 100%;
+  margin: 0;
+
+  border-top: 2px solid var(--navy);
+}
+
+.instruction-list li {
+  min-height: 125px;
+  padding: 1.4rem 0.75rem;
+
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+  align-items: start;
+  gap: 1.25rem;
+
+  border-bottom: 2px solid var(--navy);
+}
+
+.instruction-number {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  color: white;
+  background: var(--orange);
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+
+  font-weight: 900;
+}
+
+.instruction-list h3 {
+  margin: 0 0 0.45rem;
+
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.instruction-list p {
+  max-width: 700px;
+  margin: 0;
+
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---------- Section 02: Preparation ---------- */
+
+.emergency-page .prepare-section {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 7rem auto;
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(520px, 1.4fr);
+  align-items: start;
+  gap: 3.5rem;
+
+  background: var(--paper);
+  border: 2px solid var(--navy);
+}
+
+.prepare-intro {
+  min-width: 0;
+}
+
+.prepare-intro .section-label {
+  margin-bottom: 1rem;
+}
+
+.prepare-intro h2 {
+  max-width: 500px;
+  margin: 0 0 1.5rem;
+
+  color: var(--navy);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.prepare-intro > p:not(.section-label) {
+  max-width: 430px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.prepare-tip {
+  margin-top: 2rem;
+  padding: 1.25rem;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  color: var(--navy);
+  background: var(--yellow-light);
+  border-left: 6px solid var(--yellow);
+}
+
+.prepare-tip p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.tip-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+
+  font-weight: 900;
+}
+
+.prepare-grid {
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.prepare-card {
+  min-width: 0;
+  min-height: 310px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--paper);
+  border: 2px solid var(--navy);
+}
+
+.prepare-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.prepare-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  color: white;
+  background: var(--orange);
+  border: 2px solid var(--navy);
+
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.prepare-number {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.prepare-card h3 {
+  margin: 1.5rem 0 0.75rem;
+
+  color: var(--navy);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.prepare-card > p {
+  margin: 0 0 1.5rem;
+
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.prepare-check {
+  margin-top: auto;
+  padding-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--navy);
+  border-top: 1px solid #cbd3da;
+
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.prepare-check input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  accent-color: var(--green);
+}
+
+/* ---------- Section 03: Earthquake map ---------- */
+
+.emergency-page .earthquake-section {
+  width: min(1200px, calc(100% - 3rem));
+  margin: 8rem auto;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: minmax(360px, 0.8fr) minmax(600px, 1.4fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+.earthquake-heading {
+  padding: 2.5rem;
+
+  background: var(--paper);
+  border: 2px solid var(--navy);
+  box-shadow: 8px 8px 0 var(--navy);
+}
+
+.earthquake-heading h2 {
+  max-width: 430px;
+  margin: 0 0 1.5rem;
+
+  color: var(--navy);
+  font-size: clamp(2.5rem, 3.5vw, 3.7rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.earthquake-heading > p:not(.section-label) {
+  margin: 0;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.location-button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.25rem;
+
+  color: white;
+  background: var(--navy);
+  border: 2px solid var(--navy);
+
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.location-button:hover {
+  color: var(--navy);
+  background: var(--yellow);
+}
+
+.location-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.earthquake-panel {
+  min-width: 0;
+
+  overflow: hidden;
+  background: var(--paper);
+  border: 2px solid var(--navy);
+}
+
+.map-information {
+  padding: 1.25rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  border-bottom: 2px solid var(--navy);
+}
+
+#local-earthquake-status {
+  max-width: 520px;
+  margin: 0;
+
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.map-key {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.earthquake-dot {
+  width: 12px;
+  height: 12px;
+
+  display: inline-block;
+
+  background: var(--orange);
+  border: 2px solid var(--navy);
+  border-radius: 50%;
+}
+
+.emergency-page #map {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+}
+
+.map-footer {
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  color: var(--muted);
+  background: var(--blue-light);
+  border-top: 2px solid var(--navy);
+
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.map-footer p {
+  margin: 0;
+}
+
+.map-footer a {
+  color: var(--navy);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* ---------- Future information layers ---------- */
+
+.emergency-page .future-hazards {
+  width: 100%;
+  margin: 0;
+  padding: 6rem 0;
+
+  color: white;
+  background: var(--navy);
+}
+
+.future-layout {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(500px, 1.2fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+.future-hazards .guide-label {
+  color: var(--yellow);
+}
+
+.future-hazards h2 {
+  margin: 0 0 1.25rem;
+
+  color: white;
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1;
+}
+
+.future-hazards p {
+  max-width: 570px;
+  color: #d9e5ef;
+  line-height: 1.7;
+}
+
+.future-layers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.future-layers li {
+  min-height: 120px;
+  padding: 1.25rem;
+
+  color: var(--navy);
+  background: var(--paper);
+  border: 2px solid var(--yellow);
+
+  font-weight: 800;
+}
+
+.future-layers span {
+  display: block;
+  margin-bottom: 0.75rem;
+
+  color: var(--orange);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+/* ---------- Trusted sources ---------- */
+
+.emergency-page .sources-section {
+  width: min(1100px, calc(100% - 3rem));
+  margin: 7rem auto;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(500px, 1.2fr);
+  align-items: start;
+  gap: 4rem;
+}
+
+.sources-section .section-heading {
+  margin: 0;
+}
+
+.sources-section .section-heading h2 {
+  margin: 0 0 1rem;
+
+  color: var(--navy);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  line-height: 1;
+}
+
+.source-note {
+  padding: 2rem;
+
+  background: var(--blue-light);
+  border: 2px solid var(--navy);
+}
+
+.source-note p {
+  margin: 0 0 1rem;
+  line-height: 1.65;
+}
+
+.source-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.emergency-page .site-footer {
+  width: 100%;
+  margin: 0;
+  padding: 3rem max(1.5rem, calc((100% - 1100px) / 2));
+
+  color: white;
+  background: var(--navy);
+  border: 0;
+}
+
+.footer-logo img {
+  width: 64px;
+  height: auto;
+}
+
+.site-footer strong {
+  color: white;
+}
+
+.site-footer p {
+  color: #d9e5ef;
+}
+
+/* ---------- Accessibility ---------- */
+
+.emergency-page a:focus-visible,
+.emergency-page button:focus-visible,
+.emergency-page input:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 950px) {
+  .language-note {
+    display: none;
+  }
+
+  .emergency-page .emergency-hero,
+  .emergency-page .first-steps .section-container,
+  .emergency-page .prepare-section,
+  .emergency-page .earthquake-section,
+  .future-layout,
+  .emergency-page .sources-section {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-page .prepare-section {
+    gap: 2.5rem;
+  }
+
+  .earthquake-section {
+    gap: 2.5rem;
+  }
+
+  .prepare-intro h2,
+  .prepare-intro > p:not(.section-label) {
+    max-width: 650px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+  .manual-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-logo {
+    width: 58px;
+    height: 50px;
+  }
+
+  .emergency-page .nav-links {
+    width: 100%;
+    padding-bottom: 0.5rem;
+
+    overflow-x: auto;
+    gap: 1.25rem;
+
+    white-space: nowrap;
+  }
+
+  .emergency-page .emergency-hero {
+    padding-block: 4rem !important;
+    gap: 2.5rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .emergency-page .primary-button,
+  .emergency-page .secondary-button {
+    width: 100%;
+  }
+
+  .emergency-page .urgent-notice {
+    flex-direction: column;
+  }
+
+  .emergency-page .first-steps {
+    padding-block: 4rem !important;
+  }
+
+  .emergency-page .first-steps .section-heading {
+    padding: 1.75rem;
+  }
+
+  .instruction-list li {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .emergency-page .prepare-section {
+    padding: 1.25rem;
+  }
+
+  .prepare-grid,
+  .future-layers {
+    grid-template-columns: 1fr;
+  }
+
+  .prepare-card {
+    min-height: 280px;
+  }
+
+  .map-information,
+  .map-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .location-button {
+    width: 100%;
+  }
+
+  .emergency-page #map {
+    height: 380px;
+    min-height: 380px;
+  }
+}
+
+/* ---------- Small phones ---------- */
+
+@media (max-width: 480px) {
+  .section-container,
+  .emergency-page .emergency-hero,
+  .emergency-page .prepare-section,
+  .emergency-page .earthquake-section,
+  .future-layout,
+  .emergency-page .sources-section {
+    width: min(100% - 1.5rem, 1100px) !important;
+  }
+
+  .earthquake-heading,
+  .source-note {
+    padding: 1.5rem;
+  }
+
+  .prepare-intro h2,
+  .earthquake-heading h2,
+  .future-hazards h2,
+  .sources-section .section-heading h2 {
+    font-size: 2.4rem;
+  }
+}
